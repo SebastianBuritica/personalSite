@@ -1,6 +1,9 @@
 import Head from "next/head";
 import {
-  AiOutlineGithub
+  AiOutlineGithub,
+  AiTwotoneMail,
+  AiOutlineMail
+
 } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
@@ -34,33 +37,18 @@ export default function Home() {
                 />
               </li>
               <li>
-                <a
-                  className="font-burtons text-xl mr-4"
-                  href="#"
-                >
-                  Home
-                </a>
-              </li>
+    <a className="font-burtons text-xl mr-4 hover:text-teal-600" href="#home">Home</a>
+            </li>
               <li>
-                <a
-                  className="font-burtons text-xl mr-4"
-                  href="#"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a
-                  className="font-burtons text-xl"
-                  href="#"
-                >
-                  Contact
-                </a>
-              </li>
+    <a className="font-burtons text-xl mr-4 hover:text-teal-600" href="#projects">Projects</a>
+            </li>
+            <li>
+    <a className="font-burtons text-xl hover:text-teal-600" href="#contact">Contact</a>
+            </li>
             </ul>
           </nav>
           
-    <section className="text-center p-10 py-10">
+    <section id="home" className="text-center p-10 py-10">
     <div className="flex flex-col md:flex-row items-center justify-center text-left">
       <div className="mb-6 md:mb-0 md:mr-8">
     <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
@@ -83,20 +71,14 @@ export default function Home() {
   </section>
 
         {/* </section> */}
-        <section className="py-10">
+        <section id="projects" className="py-10">
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Since the beginning of my journey as a freelance designer and
-              developer, I've done remote work for
-              <span className="text-teal-500"> agencies </span>
-              consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talanted people to create digital products
-              for both business and consumer use.
+              I empower clients with tailored web and mobile solutions, ranging from static sites to dynamic, interactive platforms. Leveraging modern frameworks like React, Astro, and Next.js, I craft seamless experiences in JavaScript/TypeScript. My backend expertise spans RESTful API development with Node.js, Express.js, and Django. Plus, I deliver cross-platform mobile apps with React Native for both iOS and Android.
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
+              My services span brand design, software development, and education, each infused with a commitment to quality and innovation.
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
@@ -138,6 +120,31 @@ export default function Home() {
             </div>
           </div>
         </section>
+  <section id="contact" className="text-left py-10">
+    <h2 className="text-3xl py-1 dark:text-white">Contact</h2>
+    <p className="text-lg py-2 dark:text-white">
+    Hey there! just hit me up so that we can start chatting, no pressure at all 👋
+    </p>
+    <div className="flex items-center gap-4 mt-3">
+      <span className="inline-flex items-center justify-center p-2 bg-gray-200 rounded-full">
+      <AiOutlineMail className="text-4xl text-teal-600 dark:text-gray-400" />
+      </span>
+      <div className="flex flex-col">
+        <p className="text-lg dark:text-gray-200">Email</p>
+        <p className="text-md dark:text-gray-200">sebastianb.devv@gmail.com</p>
+      </div>
+      </div>
+  </section>
+  <footer className="py-10">
+  <div className="border-t border-gray-300 dark:border-gray-700 pt-8 flex justify-between items-center">
+    <p className="text-md dark:text-gray-200">Copyright © 2024. All rights are reserved</p>
+    <div className="flex gap-4">
+      <AiOutlineGithub className="text-3xl text-gray-600 dark:text-gray-400" />
+    </div>
+  </div>
+</footer>
+
+
       </main>
     </div>
   );
