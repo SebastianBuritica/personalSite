@@ -24,6 +24,12 @@ a {
   src: url("../public/Burtons.otf");
 }
 
+@media (max-width: 550px) {
+  main {
+    width: 500px;
+  }
+}
+
 /* The modal background overlay */
 .Overlay {
   position: fixed;
